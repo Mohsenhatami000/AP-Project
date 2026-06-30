@@ -1,6 +1,9 @@
 qt_add_executable(ClientApp
     main.cpp
     Presentation/MainWindow/mainwindow.h Presentation/MainWindow/mainwindow.cpp Presentation/MainWindow/mainwindow.ui
+    Presentation/Login/loginpage.h Presentation/Login/loginpage.cpp Presentation/Login/loginpage.ui
+
+
 )
 
 target_link_libraries(ClientApp
