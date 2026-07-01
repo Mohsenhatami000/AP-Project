@@ -14,6 +14,12 @@ class LoginPage : public QWidget
 public:
     explicit LoginPage(QWidget *parent = nullptr);
     ~LoginPage();
+signals:
+    void signUpRequested();
+
+private slots:
+
+    void on_pushButton_sSignUp_clicked();
 
 private:
     Ui::LoginPage *ui;

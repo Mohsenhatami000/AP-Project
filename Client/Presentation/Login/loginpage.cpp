@@ -12,3 +12,10 @@ LoginPage::~LoginPage()
 {
     delete ui;
 }
+
+
+void LoginPage::on_pushButton_sSignUp_clicked()
+{
+    emit signUpRequested();
+}
+
