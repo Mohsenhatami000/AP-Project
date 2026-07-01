@@ -105,6 +105,12 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>pushButton_start_new_game</tabstop>
+  <tabstop>pushButton_overall_statistics</tabstop>
+  <tabstop>pushButton_match_history</tabstop>
+  <tabstop>pushButton_back</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

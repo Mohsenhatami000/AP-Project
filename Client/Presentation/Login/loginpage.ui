@@ -209,6 +209,13 @@ QPushButton:hover {
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_UserName</tabstop>
+  <tabstop>lineEdit_Password</tabstop>
+  <tabstop>pushButton_Login</tabstop>
+  <tabstop>pushButton_sSignUp</tabstop>
+  <tabstop>pushButton_ForgotPassword</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

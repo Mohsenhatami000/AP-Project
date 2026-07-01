@@ -68,7 +68,7 @@
       </font>
      </property>
      <property name="text">
-      <string>UserName:</string>
+      <string>Username:</string>
      </property>
     </widget>
    </item>
@@ -187,6 +187,16 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_name</tabstop>
+  <tabstop>lineEdit_username</tabstop>
+  <tabstop>lineEdit_phone_number</tabstop>
+  <tabstop>lineEdit_email</tabstop>
+  <tabstop>password</tabstop>
+  <tabstop>lineEdit_confirm_password</tabstop>
+  <tabstop>pushButton_back</tabstop>
+  <tabstop>signup</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

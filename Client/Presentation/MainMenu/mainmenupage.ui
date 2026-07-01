@@ -155,6 +155,13 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>pushButton_dots_and_boxes</tabstop>
+  <tabstop>pushButton_nine_mens_morris</tabstop>
+  <tabstop>pushButton_fanorona</tabstop>
+  <tabstop>pushButton_edit_profile</tabstop>
+  <tabstop>pushButton_quit</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

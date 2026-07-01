@@ -208,6 +208,17 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEdit_name</tabstop>
+  <tabstop>lineEdit_username</tabstop>
+  <tabstop>lineEdit_phone_number</tabstop>
+  <tabstop>lineEdit_email</tabstop>
+  <tabstop>lineEdit_current_password</tabstop>
+  <tabstop>lineEdit_new_password</tabstop>
+  <tabstop>lineEdit_confirm_new_password</tabstop>
+  <tabstop>pushButton_cancel</tabstop>
+  <tabstop>pushButton_save_changes</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
