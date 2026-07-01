@@ -8,6 +8,7 @@
 #include "../MainMenu/mainmenupage.h"
 #include "../EditProfile/editprofilepage.h"
 #include "../GameMenu/gamemenupage.h"
+#include "../Lobby/lobbypage.h"
 
 
 namespace Ui {
@@ -30,6 +31,7 @@ private slots:
     void showMainMenuPage();
     void showEditProfilePage();
     void showGameMenuPage();
+    void showLobbyPage();
 
 private:
 
@@ -46,6 +48,8 @@ private:
     EditProfilePage *editProfilePage;
 
     GameMenuPage *gameMenuPage;
+
+    LobbyPage *lobbyPage;
 };
 
 #endif // MAINWINDOW_H

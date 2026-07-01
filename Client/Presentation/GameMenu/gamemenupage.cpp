@@ -18,3 +18,9 @@ void GameMenuPage::on_pushButton_back_clicked()
     emit backToMainMenuRequested();
 }
 
+
+void GameMenuPage::on_pushButton_start_new_game_clicked()
+{
+    emit startNewGameRequested();
+}
+

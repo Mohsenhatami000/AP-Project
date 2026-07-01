@@ -17,10 +17,13 @@ public:
 
 signals:
     void backToMainMenuRequested();
+    void startNewGameRequested();
 
 private slots:
 
     void on_pushButton_back_clicked();
+
+    void on_pushButton_start_new_game_clicked();
 
 private:
     Ui::GameMenuPage *ui;

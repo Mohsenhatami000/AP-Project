@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     mainMenuPage = new MainMenuPage(this);
     editProfilePage = new EditProfilePage(this);
     gameMenuPage = new GameMenuPage(this);
+    lobbyPage = new LobbyPage(this);
 
 
     ui->stackedWidget->addWidget(signUpPage);
@@ -22,6 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->stackedWidget->addWidget(mainMenuPage);
     ui->stackedWidget->addWidget(editProfilePage);
     ui->stackedWidget->addWidget(gameMenuPage);
+    ui->stackedWidget->addWidget(lobbyPage);
 
     ui->stackedWidget->setCurrentWidget(loginPage);
 
@@ -90,6 +92,16 @@ MainWindow::MainWindow(QWidget *parent)
             &GameMenuPage::backToMainMenuRequested,
             this,
             &MainWindow::showMainMenuPage);
+
+    connect(gameMenuPage,
+            &GameMenuPage::startNewGameRequested,
+            this,
+            &MainWindow::showLobbyPage);
+
+    connect(lobbyPage,
+            &LobbyPage::backToGameMenuRequested,
+            this,
+            &MainWindow::showGameMenuPage);
 }
 
 void MainWindow::showSignupPage(){
@@ -115,6 +127,10 @@ void MainWindow::showEditProfilePage(){
 
 void MainWindow::showGameMenuPage(){
     ui->stackedWidget->setCurrentWidget(gameMenuPage);
+}
+
+void MainWindow::showLobbyPage(){
+    ui->stackedWidget->setCurrentWidget(lobbyPage);
 }
 
 MainWindow::~MainWindow()

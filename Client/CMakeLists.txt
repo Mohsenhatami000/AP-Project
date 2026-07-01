@@ -7,6 +7,7 @@ qt_add_executable(ClientApp
     Presentation/MainMenu/mainmenupage.h Presentation/MainMenu/mainmenupage.cpp Presentation/MainMenu/mainmenupage.ui
     Presentation/EditProfile/editprofilepage.h Presentation/EditProfile/editprofilepage.cpp Presentation/EditProfile/editprofilepage.ui
     Presentation/GameMenu/gamemenupage.h Presentation/GameMenu/gamemenupage.cpp Presentation/GameMenu/gamemenupage.ui
+    Presentation/Lobby/lobbypage.h Presentation/Lobby/lobbypage.cpp Presentation/Lobby/lobbypage.ui
 
 
 )
