@@ -12,11 +12,13 @@ MainWindow::MainWindow(QWidget *parent)
     signUpPage = new SignUp(this);
     resetPasswordPage = new ResetPasswordPage(this);
     mainMenuPage = new MainMenuPage(this);
+    editProfilePage = new EditProfilePage(this);
 
     ui->stackedWidget->addWidget(signUpPage);
     ui->stackedWidget->addWidget(loginPage);
     ui->stackedWidget->addWidget(resetPasswordPage);
     ui->stackedWidget->addWidget(mainMenuPage);
+    ui->stackedWidget->addWidget(editProfilePage);
 
     ui->stackedWidget->setCurrentWidget(loginPage);
 
@@ -51,6 +53,22 @@ MainWindow::MainWindow(QWidget *parent)
             this,
             &MainWindow::close);
 
+    connect(mainMenuPage,
+            &MainMenuPage::editProfileRequested,
+            this,
+            &MainWindow::showEditProfilePage);
+
+    connect(editProfilePage,
+            &EditProfilePage::cancelRequested,
+            this,
+            &MainWindow::showMainMenuPage);
+
+    connect(editProfilePage,
+            &EditProfilePage::saveChangesRequested,
+            this,
+            &MainWindow::showMainMenuPage);
+
+
 }
 
 void MainWindow::showSignupPage(){
@@ -70,6 +88,9 @@ void MainWindow::showMainMenuPage(){
     ui->stackedWidget->setCurrentWidget(mainMenuPage);
 }
 
+void MainWindow::showEditProfilePage(){
+    ui->stackedWidget->setCurrentWidget(editProfilePage);
+}
 
 MainWindow::~MainWindow()
 {

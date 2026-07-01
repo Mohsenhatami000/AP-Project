@@ -16,9 +16,12 @@ public:
     ~MainMenuPage();
 signals:
     void quitRequested();
+    void editProfileRequested();
 
 private slots:
     void on_pushButton_quit_clicked();
+
+    void on_pushButton_edit_profile_clicked();
 
 private:
     Ui::MainMenuPage *ui;

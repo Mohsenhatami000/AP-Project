@@ -5,6 +5,7 @@ qt_add_executable(ClientApp
     Presentation/SignUp/signuppage.h Presentation/SignUp/signuppage.cpp Presentation/SignUp/signuppage.ui
     Presentation/ResetPassword/resetpasswordpage.h Presentation/ResetPassword/resetpasswordpage.cpp Presentation/ResetPassword/resetpasswordpage.ui
     Presentation/MainMenu/mainmenupage.h Presentation/MainMenu/mainmenupage.cpp Presentation/MainMenu/mainmenupage.ui
+    Presentation/EditProfile/editprofilepage.h Presentation/EditProfile/editprofilepage.cpp Presentation/EditProfile/editprofilepage.ui
 
 
 )

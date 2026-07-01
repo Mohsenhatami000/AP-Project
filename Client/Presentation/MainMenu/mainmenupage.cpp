@@ -18,3 +18,9 @@ void MainMenuPage::on_pushButton_quit_clicked()
     emit quitRequested();
 }
 
+
+void MainMenuPage::on_pushButton_edit_profile_clicked()
+{
+    emit editProfileRequested();
+}
+
