@@ -24,3 +24,21 @@ void MainMenuPage::on_pushButton_edit_profile_clicked()
     emit editProfileRequested();
 }
 
+
+void MainMenuPage::on_pushButton_dots_and_boxes_clicked()
+{
+    emit dotsAndBoxesRequested();
+}
+
+
+void MainMenuPage::on_pushButton_nine_mens_morris_clicked()
+{
+    emit nineMensMorrisRequested();
+}
+
+
+void MainMenuPage::on_pushButton_fanorona_clicked()
+{
+    emit fanoronaRequested();
+}
+

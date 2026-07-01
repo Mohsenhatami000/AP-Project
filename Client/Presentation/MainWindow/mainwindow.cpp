@@ -13,12 +13,15 @@ MainWindow::MainWindow(QWidget *parent)
     resetPasswordPage = new ResetPasswordPage(this);
     mainMenuPage = new MainMenuPage(this);
     editProfilePage = new EditProfilePage(this);
+    gameMenuPage = new GameMenuPage(this);
+
 
     ui->stackedWidget->addWidget(signUpPage);
     ui->stackedWidget->addWidget(loginPage);
     ui->stackedWidget->addWidget(resetPasswordPage);
     ui->stackedWidget->addWidget(mainMenuPage);
     ui->stackedWidget->addWidget(editProfilePage);
+    ui->stackedWidget->addWidget(gameMenuPage);
 
     ui->stackedWidget->setCurrentWidget(loginPage);
 
@@ -68,7 +71,25 @@ MainWindow::MainWindow(QWidget *parent)
             this,
             &MainWindow::showMainMenuPage);
 
+    connect(mainMenuPage,
+            &MainMenuPage::dotsAndBoxesRequested,
+            this,
+            &MainWindow::showGameMenuPage);
 
+    connect(mainMenuPage,
+            &MainMenuPage::nineMensMorrisRequested,
+            this,
+            &MainWindow::showGameMenuPage);
+
+    connect(mainMenuPage,
+            &MainMenuPage::fanoronaRequested,
+            this,
+            &MainWindow::showGameMenuPage);
+
+    connect(gameMenuPage,
+            &GameMenuPage::backToMainMenuRequested,
+            this,
+            &MainWindow::showMainMenuPage);
 }
 
 void MainWindow::showSignupPage(){
@@ -90,6 +111,10 @@ void MainWindow::showMainMenuPage(){
 
 void MainWindow::showEditProfilePage(){
     ui->stackedWidget->setCurrentWidget(editProfilePage);
+}
+
+void MainWindow::showGameMenuPage(){
+    ui->stackedWidget->setCurrentWidget(gameMenuPage);
 }
 
 MainWindow::~MainWindow()

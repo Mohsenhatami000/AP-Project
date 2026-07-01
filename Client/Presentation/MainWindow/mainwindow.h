@@ -7,6 +7,8 @@
 #include "../ResetPassword/resetpasswordpage.h"
 #include "../MainMenu/mainmenupage.h"
 #include "../EditProfile/editprofilepage.h"
+#include "../GameMenu/gamemenupage.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +29,7 @@ private slots:
     void showResetPasswordPage();
     void showMainMenuPage();
     void showEditProfilePage();
+    void showGameMenuPage();
 
 private:
 
@@ -41,6 +44,8 @@ private:
     MainMenuPage *mainMenuPage;
 
     EditProfilePage *editProfilePage;
+
+    GameMenuPage *gameMenuPage;
 };
 
 #endif // MAINWINDOW_H
