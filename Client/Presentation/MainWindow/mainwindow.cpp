@@ -8,139 +8,139 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    loginPage = new LoginPage(this);
-    signUpPage = new SignUpPage(this);
-    resetPasswordPage = new ResetPasswordPage(this);
-    mainMenuPage = new MainMenuPage(this);
-    editProfilePage = new EditProfilePage(this);
-    gameMenuPage = new GameMenuPage(this);
-    lobbyPage = new LobbyPage(this);
+    loginPage_ = new LoginPage(this);
+    signUpPage_ = new SignUpPage(this);
+    resetPasswordPage_ = new ResetPasswordPage(this);
+    mainMenuPage_ = new MainMenuPage(this);
+    editProfilePage_ = new EditProfilePage(this);
+    gameMenuPage_ = new GameMenuPage(this);
+    lobbyPage_ = new LobbyPage(this);
 
 
-    ui->stackedWidget->addWidget(signUpPage);
-    ui->stackedWidget->addWidget(loginPage);
-    ui->stackedWidget->addWidget(resetPasswordPage);
-    ui->stackedWidget->addWidget(mainMenuPage);
-    ui->stackedWidget->addWidget(editProfilePage);
-    ui->stackedWidget->addWidget(gameMenuPage);
-    ui->stackedWidget->addWidget(lobbyPage);
+    ui->stackedWidget->addWidget(signUpPage_);
+    ui->stackedWidget->addWidget(loginPage_);
+    ui->stackedWidget->addWidget(resetPasswordPage_);
+    ui->stackedWidget->addWidget(mainMenuPage_);
+    ui->stackedWidget->addWidget(editProfilePage_);
+    ui->stackedWidget->addWidget(gameMenuPage_);
+    ui->stackedWidget->addWidget(lobbyPage_);
 
-    ui->stackedWidget->setCurrentWidget(loginPage);
+    ui->stackedWidget->setCurrentWidget(loginPage_);
 
 
-    connect(loginPage,
+    connect(loginPage_,
             &LoginPage::signUpRequested,
             this,
             &MainWindow::showSignupPage);
 
-    connect(signUpPage,
+    connect(signUpPage_,
             &SignUpPage::backToLoginRequested,
             this,
             &MainWindow::showLoginPage);
 
-    connect(signUpPage,
+    connect(signUpPage_,
             &SignUpPage::signUpRequested,
             this,
             &MainWindow::showLoginPage); // Must be edited later
 
-    connect(loginPage,
+    connect(loginPage_,
             &LoginPage::resetPasswordRequested,
             this,
             &MainWindow::showResetPasswordPage);
 
-    connect(resetPasswordPage,
+    connect(resetPasswordPage_,
             &ResetPasswordPage::backToLoginRequested,
             this,
             &MainWindow::showLoginPage);
 
-    connect(resetPasswordPage,
+    connect(resetPasswordPage_,
             &ResetPasswordPage::resetPasswordRequested,
             this,
             &MainWindow::showLoginPage); // Must be edited later
 
-    connect(loginPage,
+    connect(loginPage_,
             &LoginPage::mainMenuRequested,
             this,
             &MainWindow::showMainMenuPage);
 
-    connect(mainMenuPage,
+    connect(mainMenuPage_,
             &MainMenuPage::quitRequested,
             this,
             &MainWindow::close);
 
-    connect(mainMenuPage,
+    connect(mainMenuPage_,
             &MainMenuPage::editProfileRequested,
             this,
             &MainWindow::showEditProfilePage);
 
-    connect(editProfilePage,
+    connect(editProfilePage_,
             &EditProfilePage::cancelRequested,
             this,
             &MainWindow::showMainMenuPage);
 
-    connect(editProfilePage,
+    connect(editProfilePage_,
             &EditProfilePage::saveChangesRequested,
             this,
             &MainWindow::showMainMenuPage);
 
-    connect(mainMenuPage,
+    connect(mainMenuPage_,
             &MainMenuPage::dotsAndBoxesRequested,
             this,
             &MainWindow::showGameMenuPage);
 
-    connect(mainMenuPage,
+    connect(mainMenuPage_,
             &MainMenuPage::nineMensMorrisRequested,
             this,
             &MainWindow::showGameMenuPage);
 
-    connect(mainMenuPage,
+    connect(mainMenuPage_,
             &MainMenuPage::fanoronaRequested,
             this,
             &MainWindow::showGameMenuPage);
 
-    connect(gameMenuPage,
+    connect(gameMenuPage_,
             &GameMenuPage::backToMainMenuRequested,
             this,
             &MainWindow::showMainMenuPage);
 
-    connect(gameMenuPage,
+    connect(gameMenuPage_,
             &GameMenuPage::startNewGameRequested,
             this,
             &MainWindow::showLobbyPage);
 
-    connect(lobbyPage,
+    connect(lobbyPage_,
             &LobbyPage::backToGameMenuRequested,
             this,
             &MainWindow::showGameMenuPage);
 }
 
 void MainWindow::showSignupPage(){
-    ui->stackedWidget->setCurrentWidget(signUpPage);
+    ui->stackedWidget->setCurrentWidget(signUpPage_);
 
 }
 
 void MainWindow::showLoginPage(){
-    ui->stackedWidget->setCurrentWidget(loginPage);
+    ui->stackedWidget->setCurrentWidget(loginPage_);
 }
 
 void MainWindow::showResetPasswordPage(){
-    ui->stackedWidget->setCurrentWidget(resetPasswordPage);
+    ui->stackedWidget->setCurrentWidget(resetPasswordPage_);
 }
 
 void MainWindow::showMainMenuPage(){
-    ui->stackedWidget->setCurrentWidget(mainMenuPage);
+    ui->stackedWidget->setCurrentWidget(mainMenuPage_);
 }
 
 void MainWindow::showEditProfilePage(){
-    ui->stackedWidget->setCurrentWidget(editProfilePage);
+    ui->stackedWidget->setCurrentWidget(editProfilePage_);
 }
 
 void MainWindow::showGameMenuPage(){
-    ui->stackedWidget->setCurrentWidget(gameMenuPage);
+    ui->stackedWidget->setCurrentWidget(gameMenuPage_);
 }
 
 void MainWindow::showLobbyPage(){
-    ui->stackedWidget->setCurrentWidget(lobbyPage);
+    ui->stackedWidget->setCurrentWidget(lobbyPage_);
 }
 
 MainWindow::~MainWindow()

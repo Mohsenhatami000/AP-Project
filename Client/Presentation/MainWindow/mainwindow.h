@@ -37,19 +37,19 @@ private:
 
     Ui::MainWindow *ui;
 
-    LoginPage *loginPage;
+    LoginPage *loginPage_;
 
-    SignUpPage *signUpPage;
+    SignUpPage *signUpPage_;
 
-    ResetPasswordPage *resetPasswordPage;
+    ResetPasswordPage *resetPasswordPage_;
 
-    MainMenuPage *mainMenuPage;
+    MainMenuPage *mainMenuPage_;
 
-    EditProfilePage *editProfilePage;
+    EditProfilePage *editProfilePage_;
 
-    GameMenuPage *gameMenuPage;
+    GameMenuPage *gameMenuPage_;
 
-    LobbyPage *lobbyPage;
+    LobbyPage *lobbyPage_;
 };
 
 #endif // MAINWINDOW_H
